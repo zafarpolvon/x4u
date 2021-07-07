@@ -6,12 +6,15 @@
       <router-link
         to="/"
         tag="a"
-        class="flex-no-grow flex-no-shrink relative py-4 px-4 leading-normal text-black no-underline flex items-center hover:bg-grey-dark"
-        ><img class="h-14" src="../../assets/img/logo.png" alt=""
+        class="flex-no-grow flex-no-shrink relative py-3 px-4 leading-normal text-black no-underline flex items-center hover:bg-grey-dark"
+        ><img
+          class="h-12"
+          src="http://x4upoddomen.itmaker.uz/public/uploads/1625575347.png"
+          alt=""
       /></router-link>
       <div id="user" v-if="remove && check">
         <button
-          v-if="!menu"
+          v-if="!updated"
           @click="changeValue()"
           class="absolute top-0 z-50 xl:left-0 xl:ml-32 xl:mt-4 mt-4 right-0 mr-20 p-2"
         >
@@ -26,7 +29,7 @@
         </button>
         <div
           id="user"
-          v-if="menu"
+          v-if="updated"
           class="absolute  top-0 z-50 left-0 ml-28 mt-6 text-white xl:block hidden"
         >
           <h4 class="text-lg font-semibold">Кабинет</h4>
@@ -41,10 +44,10 @@
           v-if="!user.name && remove"
           to="/login"
           tag="a"
-          class="flex-no-grow flex-no-shrink relative py-4 px-4 leading-normal text-white text-xl no-underline flex items-center hover:bg-grey-dark"
+          class="flex-no-grow flex-no-shrink relative py-3 px-4 leading-normal text-white text-xl no-underline flex items-center hover:bg-grey-dark"
           ><img
-            class="h-14 w-14 mr-0 xl:mr-2 bg-center"
-            src="../../assets/img/Vector.png"
+            class="h-12 w-12 mr-0 xl:mr-2 bg-center"
+            src="http://x4upoddomen.itmaker.uz/public/uploads/1625575399.png"
             alt=""
           /><span class="hidden xl:block">Войти</span></router-link
         >

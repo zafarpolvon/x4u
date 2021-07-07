@@ -12,19 +12,23 @@
       <Menu @open-menu="openMenu" :menu="menu" :openMenu="openMenu" />
       <div class="overflow-auto allusers xl:h-screen h-full w-full ">
         <div class="relative text-gray-600 mt-24 flex justify-center">
-          <button type="submit" class="absolute search-button top-0 mt-3 ml-6">
+          <button
+            type="submit"
+            class="absolute search-button hidden xl:block top-0 mt-3 ml-6"
+          >
             <i class="fas fa-search text-lg text-white"></i>
           </button>
           <input
-            type="search"
+            type="text"
             name="serch"
-            placeholder="Поиск"
-            class="bg-white h-14 px-12 pr-6 text-lg focus:outline-none border-2 search-input"
+            placeholder="Поиск по ID"
+            class="bg-white h-14 px-5 xl:px-12 pr-6 text-lg focus:outline-none border-2 search-input"
             v-model="search"
           />
         </div>
+
         <div
-          class="my-6  flex xl:flex-row flex-col w-full"
+          class="my-6  flex xl:flex-row flex-col w-full pb-3"
           :key="person.id"
           v-for="person in filteredBlogs"
         >
@@ -64,11 +68,10 @@ export default {
   name: "Home",
   props: ["menu", "openMenu"],
   data: () => ({
-    menu: true,
     persons: [],
     search: "",
-    completedSteps: 999999,
-    totalSteps: 50,
+    completedSteps: 0,
+    totalSteps: 100000,
     width: null,
     user: {}
   }),
@@ -90,7 +93,7 @@ export default {
     }
   },
   async mounted() {
-    if (this.width > 400) {
+    if (this.width > 1200) {
       this.menu = true;
     } else {
       this.menu = false;

@@ -52,9 +52,8 @@ export default {
   name: "Home",
   props: ["menu", "openMenu"],
   data: () => ({
-    menu: true,
     updateCount: 0,
-    totalSteps: 10,
+    totalSteps: 1000000,
     width: null,
     persons: [],
     user: {}
@@ -62,7 +61,7 @@ export default {
   async mounted() {
     this.user = await this.$store.dispatch("getInfo");
     this.persons = await this.$store.dispatch("loadData");
-    if (this.width > 400) {
+    if (this.width > 1200) {
       this.menu = true;
     } else {
       this.menu = false;

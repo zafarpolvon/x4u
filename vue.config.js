@@ -1,4 +1,4 @@
 module.exports = {
-  publicPath: process.env.NODE_ENV === "production" ? "/x4u/" : "/",
+  publicPath: process.env.NODE_ENV === "production" ? "" : "",
   transpileDependencies: ["vuex-persist"]
 };

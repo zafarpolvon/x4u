@@ -113,14 +113,12 @@
             </svg>
           </div>
           <input
-            type="text"
+            type="tel"
             class="w-full -ml-10 pl-10 form-input pr-3 py-2 border-2 border-gray-200 outline-none"
             placeholder="Номер телефона"
             v-model="number"
             :class="{
-              'error-boarder':
-                ($v.number.$dirty && !$v.number.required) ||
-                ($v.number.$dirty && !$v.number.numeric)
+              'error-boarder': $v.number.$dirty && !$v.number.required
             }"
           />
         </div>
@@ -192,8 +190,7 @@ export default {
       email
     },
     number: {
-      required,
-      numeric
+      required
     },
     message: {
       required

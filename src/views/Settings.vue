@@ -38,7 +38,7 @@
           </div>
         </li>
         <li class="flex flex-wrap mt-5">
-          <div class="px-8 xl:w-1/3 w-full mt-4 xl:mt-0">
+          <div class="px-8 xl:w-1/3 w-full mt-0 xl:mt-0">
             <label class="text-profile">Серия паспорта</label>
             <input
               v-model="passport_series"
@@ -48,7 +48,7 @@
             />
           </div>
           <div class="px-8 xl:w-1/3 w-full mt-4 xl:mt-0">
-            <label class="text-profile">Дата рождения</label>
+            <label class="text-profile w-full">Дата рождения</label>
             <input
               disabled
               v-model="date_of_birth"
@@ -57,7 +57,7 @@
             />
           </div>
           <div class="px-8 xl:w-1/3 w-full mt-4 xl:mt-0">
-            <label class="text-profile">Дата регистрации</label>
+            <label class="text-profile w-full">Дата регистрации</label>
             <input
               disabled
               v-model="created_at"
@@ -67,7 +67,7 @@
           </div>
         </li>
         <li class="flex flex-wrap mt-5">
-          <div class="px-8 w-full mt-4 xl:mt-0">
+          <div class="px-8 w-full mt-0 xl:mt-0">
             <label class="text-profile">Место прописки</label>
             <input
               disabled
@@ -78,7 +78,7 @@
           </div>
         </li>
         <li class="flex flex-wrap mt-5">
-          <div class="px-8 xl:w-1/3 w-full mt-4 xl:mt-0">
+          <div class="px-8 xl:w-1/3 w-full mt-0 xl:mt-0">
             <label class="text-profile">ID</label>
             <input disabled v-model="id" class="input-profile" type="text" />
           </div>
@@ -86,14 +86,6 @@
             <label class="text-profile">Электронная почта</label>
             <input disabled v-model="email" class="input-profile" type="text" />
           </div>
-          <!-- <a href="#" class="px-8 xl:w-1/3 w-full mt-4 xl:mt-0">
-            <button
-              type="submit"
-              class="button-profile text-center bg-green-500 text-white w-full mt-8"
-            >
-              <p>Сохранить</p>
-            </button>
-          </a> -->
         </li>
       </form>
     </div>
@@ -110,7 +102,6 @@ export default {
   props: ["menu", "openMenu"],
 
   data: () => ({
-    menu: true,
     name: "",
     address: "",
     created_at: "",
@@ -126,7 +117,7 @@ export default {
     width: null
   }),
   async mounted() {
-    if (this.width > 400) {
+    if (this.width > 1200) {
       this.menu = true;
     } else {
       this.menu = false;

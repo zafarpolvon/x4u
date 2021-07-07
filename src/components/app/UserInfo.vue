@@ -29,7 +29,7 @@
         <i class="fas fa-users pr-3"></i>
         Ученики: ({{ parents.length }})
       </h5>
-      <h5 v-else class="py-1">
+      <h5 v-else class="py-1 hidden">
         <i class="fas fa-users pr-3"></i>
 
         ({{ 0 }})

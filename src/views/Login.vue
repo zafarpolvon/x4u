@@ -10,7 +10,7 @@
     <div class="h-screen flex px-4 xl:px-0">
       <form
         @submit.prevent="submitHandler"
-        class=" m-auto xl:py-8 pt-8 form xl:w-1/3 w-full shadow-xl "
+        class=" m-auto xl:py-8 pt-8 form xl:w-1/3 md:w-1/3 w-full shadow-xl "
       >
         <h3 class="text-center text-white xl:text-2xl text-xl">
           Добро пожадовать в X4U
@@ -112,7 +112,7 @@ export default {
         if (localStorage.getItem("id")) {
           this.$router.push("/Profile");
         }
-      }, 3000);
+      }, 1000);
     }
   },
   components: {
@@ -122,7 +122,7 @@ export default {
 </script>
 <style scoped>
 .back {
-  background-image: url(../assets/img/image.png);
+  background-image: url("http://x4upoddomen.itmaker.uz/public/uploads/1625575233.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
